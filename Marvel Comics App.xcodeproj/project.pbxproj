@@ -18,9 +18,11 @@
 		88BD8913270E0FEC008F30DE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8912270E0FEC008F30DE /* CustomLabel.swift */; };
 		88BD8915270E105C008F30DE /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8914270E105C008F30DE /* CustomErrors.swift */; };
 		88BD8917270E1070008F30DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8916270E1070008F30DE /* NetworkManager.swift */; };
+		F48B93F06628DEDA9172ED5B /* Pods_Marvel_Comics_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_Comics_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BD88E9270E0C3E008F30DE /* Marvel Comics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Comics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BD88EC270E0C3E008F30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		88BD8912270E0FEC008F30DE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		88BD8914270E105C008F30DE /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		88BD8916270E1070008F30DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A362120F66A5F6BA013D3F7D /* Pods-Marvel Comics App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Comics App.release.xcconfig"; path = "Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App.release.xcconfig"; sourceTree = "<group>"; };
+		CB091C937CF8FB917E483C41 /* Pods-Marvel Comics App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Comics App.debug.xcconfig"; path = "Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48B93F06628DEDA9172ED5B /* Pods_Marvel_Comics_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C07B70F77CB774C6E0275F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB091C937CF8FB917E483C41 /* Pods-Marvel Comics App.debug.xcconfig */,
+				A362120F66A5F6BA013D3F7D /* Pods-Marvel Comics App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		88BD88E0270E0C3E008F30DE = {
 			isa = PBXGroup;
 			children = (
 				88BD88EB270E0C3E008F30DE /* Marvel Comics App */,
 				88BD88EA270E0C3E008F30DE /* Products */,
+				2C07B70F77CB774C6E0275F0 /* Pods */,
+				B5252855CB88902062A9B7A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +179,14 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		B5252855CB88902062A9B7A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88BD88FD270E0C40008F30DE /* Build configuration list for PBXNativeTarget "Marvel Comics App" */;
 			buildPhases = (
+				FCBCDA845FA64B64E4B571DC /* [CP] Check Pods Manifest.lock */,
 				88BD88E5270E0C3E008F30DE /* Sources */,
 				88BD88E6270E0C3E008F30DE /* Frameworks */,
 				88BD88E7270E0C3E008F30DE /* Resources */,
+				5997101486E623BCEE87141C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +253,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5997101486E623BCEE87141C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCBCDA845FA64B64E4B571DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Marvel Comics App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		88BD88E5270E0C3E008F30DE /* Sources */ = {
@@ -376,6 +445,7 @@
 		};
 		88BD88FE270E0C40008F30DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB091C937CF8FB917E483C41 /* Pods-Marvel Comics App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -403,6 +473,7 @@
 		};
 		88BD88FF270E0C40008F30DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A362120F66A5F6BA013D3F7D /* Pods-Marvel Comics App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
