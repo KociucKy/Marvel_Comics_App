@@ -11,5 +11,15 @@ class ComicsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureVC()
+    }
+    
+    
+    //MARK: - Methods
+    func configureVC(){
+        title = "Marvel Comics"
+        view.backgroundColor = .secondarySystemBackground
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.tabBarItem.title = ""
     }
 }
