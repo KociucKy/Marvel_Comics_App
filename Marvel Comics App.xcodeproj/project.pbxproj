@@ -11,6 +11,13 @@
 		88BD88EF270E0C3E008F30DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */; };
 		88BD88F6270E0C40008F30DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BD88F5270E0C40008F30DE /* Assets.xcassets */; };
 		88BD88F9270E0C40008F30DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BD88F7270E0C40008F30DE /* LaunchScreen.storyboard */; };
+		88BD8908270E0ED1008F30DE /* ComicsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8907270E0ED1008F30DE /* ComicsVC.swift */; };
+		88BD890A270E0EE3008F30DE /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8909270E0EE3008F30DE /* SearchVC.swift */; };
+		88BD890D270E0F51008F30DE /* ComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD890C270E0F51008F30DE /* ComicsCell.swift */; };
+		88BD8910270E0F77008F30DE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD890F270E0F77008F30DE /* CustomTextField.swift */; };
+		88BD8913270E0FEC008F30DE /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8912270E0FEC008F30DE /* CustomLabel.swift */; };
+		88BD8915270E105C008F30DE /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8914270E105C008F30DE /* CustomErrors.swift */; };
+		88BD8917270E1070008F30DE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8916270E1070008F30DE /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		88BD88F5270E0C40008F30DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88BD88F8270E0C40008F30DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88BD88FA270E0C40008F30DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88BD8907270E0ED1008F30DE /* ComicsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsVC.swift; sourceTree = "<group>"; };
+		88BD8909270E0EE3008F30DE /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		88BD890C270E0F51008F30DE /* ComicsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsCell.swift; sourceTree = "<group>"; };
+		88BD890F270E0F77008F30DE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		88BD8912270E0FEC008F30DE /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		88BD8914270E105C008F30DE /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		88BD8916270E1070008F30DE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +66,100 @@
 		88BD88EB270E0C3E008F30DE /* Marvel Comics App */ = {
 			isa = PBXGroup;
 			children = (
-				88BD88EC270E0C3E008F30DE /* AppDelegate.swift */,
-				88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */,
+				88BD8906270E0E0E008F30DE /* AppDelegate */,
+				88BD8901270E0DEC008F30DE /* Managers */,
+				88BD8900270E0DE4008F30DE /* Models */,
+				88BD8902270E0DF2008F30DE /* Views */,
+				88BD8903270E0DF9008F30DE /* Controllers */,
+				88BD8905270E0E05008F30DE /* Utilities */,
+				88BD8904270E0E01008F30DE /* Resources */,
+			);
+			path = "Marvel Comics App";
+			sourceTree = "<group>";
+		};
+		88BD8900270E0DE4008F30DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88BD8901270E0DEC008F30DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				88BD8916270E1070008F30DE /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		88BD8902270E0DF2008F30DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88BD8911270E0FDE008F30DE /* Labels */,
+				88BD890E270E0F5E008F30DE /* Text Fields */,
+				88BD890B270E0F39008F30DE /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		88BD8903270E0DF9008F30DE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				88BD8907270E0ED1008F30DE /* ComicsVC.swift */,
+				88BD8909270E0EE3008F30DE /* SearchVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		88BD8904270E0E01008F30DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				88BD88F5270E0C40008F30DE /* Assets.xcassets */,
 				88BD88F7270E0C40008F30DE /* LaunchScreen.storyboard */,
 				88BD88FA270E0C40008F30DE /* Info.plist */,
 			);
-			path = "Marvel Comics App";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		88BD8905270E0E05008F30DE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88BD8914270E105C008F30DE /* CustomErrors.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		88BD8906270E0E0E008F30DE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				88BD88EC270E0C3E008F30DE /* AppDelegate.swift */,
+				88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		88BD890B270E0F39008F30DE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88BD890C270E0F51008F30DE /* ComicsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		88BD890E270E0F5E008F30DE /* Text Fields */ = {
+			isa = PBXGroup;
+			children = (
+				88BD890F270E0F77008F30DE /* CustomTextField.swift */,
+			);
+			path = "Text Fields";
+			sourceTree = "<group>";
+		};
+		88BD8911270E0FDE008F30DE /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				88BD8912270E0FEC008F30DE /* CustomLabel.swift */,
+			);
+			path = Labels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BD8917270E1070008F30DE /* NetworkManager.swift in Sources */,
+				88BD890A270E0EE3008F30DE /* SearchVC.swift in Sources */,
 				88BD88ED270E0C3E008F30DE /* AppDelegate.swift in Sources */,
+				88BD8910270E0F77008F30DE /* CustomTextField.swift in Sources */,
+				88BD8913270E0FEC008F30DE /* CustomLabel.swift in Sources */,
+				88BD890D270E0F51008F30DE /* ComicsCell.swift in Sources */,
+				88BD8915270E105C008F30DE /* CustomErrors.swift in Sources */,
+				88BD8908270E0ED1008F30DE /* ComicsVC.swift in Sources */,
 				88BD88EF270E0C3E008F30DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +383,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Y8FFN6N8G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Marvel Comics App/Info.plist";
+				INFOPLIST_FILE = "Marvel Comics App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -302,7 +410,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Y8FFN6N8G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Marvel Comics App/Info.plist";
+				INFOPLIST_FILE = "Marvel Comics App/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
