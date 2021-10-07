@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CustomContainerView: UIView {
+class StateContainerView: UIView {
     
     //MARK: - UI Elements
     var stateImageView = UIImageView()

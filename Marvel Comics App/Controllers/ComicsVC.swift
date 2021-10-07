@@ -25,7 +25,7 @@ class ComicsVC: UIViewController {
     //MARK: - Methods
     func configureVC(){
         title = "Marvel Comics"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .secondarySystemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.title = ""
         
@@ -36,8 +36,11 @@ class ComicsVC: UIViewController {
         comicsTableView = UITableView()
         comicsTableView.dataSource = self
         comicsTableView.delegate = self
+        comicsTableView.backgroundColor  = .secondarySystemBackground
+        comicsTableView.separatorStyle = .none
         
         view.addSubview(comicsTableView)
+        comicsTableView.register(ComicsCell.self, forCellReuseIdentifier: ComicsCell.reuseID)
         comicsTableView.snp.makeConstraints { make in
             make.topMargin.equalToSuperview()
             make.left.equalTo(15)
@@ -50,17 +53,35 @@ class ComicsVC: UIViewController {
 
 //MARK: - UITableView DataSource and Delegate
 extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 20
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = .clear
+        return headerView
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1.0
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .systemPink
+        let cell = comicsTableView.dequeueReusableCell(withIdentifier: ComicsCell.reuseID, for: indexPath) as! ComicsCell
+        cell.coverImage.image = UIImage(named: "Cover")
+        cell.backgroundColor = .systemBackground
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250.0
+        return 200.0
     }
 }

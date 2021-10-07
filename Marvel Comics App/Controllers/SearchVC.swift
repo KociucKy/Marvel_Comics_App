@@ -12,7 +12,7 @@ class SearchVC: UIViewController {
     
     //MARK: - UI Elements
     let searchTextField = CustomTextField(frame: .zero)
-    let stateContainer = CustomContainerView(text: "Start typing to find a particular comics.", icon: "book.fill")
+    let stateContainer = StateContainerView(text: "Start typing to find a particular comics.", icon: "book.fill")
     
 
     override func viewDidLoad() {
