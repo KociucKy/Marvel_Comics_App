@@ -53,6 +53,8 @@ class ComicsVC: UIViewController {
 
 //MARK: - UITableView DataSource and Delegate
 extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
+    
+    //Using Sections with 1 row inside, to give cells a padding between them
     func numberOfSections(in tableView: UITableView) -> Int {
         return 20
     }

@@ -41,8 +41,7 @@ class SearchVC: UIViewController {
         }
         
         stateContainer.snp.makeConstraints { make in
-            make.topMargin.equalTo(280)
-            make.centerX.equalTo(self.view)
+            make.center.equalTo(self.view)
             make.height.equalTo(150)
             make.width.equalToSuperview()
         }

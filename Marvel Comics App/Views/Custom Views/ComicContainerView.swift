@@ -39,23 +39,25 @@ class ComicContainerView: UIView {
         descriptionLabel.text = "Jen Walters used to fight for justice in the courtroom as a lawyer and outside of it as the super hero known as She-Hulk. But after the events of Civil War, Jen's Hulk persona has changed."
         descriptionLabel.numberOfLines = 0
         
+        let padding: CGFloat = 12
+        
         titleLabel.snp.makeConstraints { make in
-            make.top.left.equalTo(12)
-            make.right.equalTo(-12)
+            make.top.left.equalTo(padding)
+            make.right.equalTo(-padding)
             make.height.equalTo(20)
         }
         
         authorLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.left.equalTo(12)
-            make.right.equalTo(-12)
+            make.left.equalTo(padding)
+            make.right.equalTo(-padding)
             make.height.equalTo(20)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.topMargin.equalTo(authorLabel.snp.bottom).offset(12)
-            make.left.equalTo(12)
-            make.right.equalTo(-12)
+            make.topMargin.equalTo(authorLabel.snp.bottom).offset(padding)
+            make.left.equalTo(padding)
+            make.right.equalTo(-padding)
             make.bottom.equalToSuperview()
         }
     }

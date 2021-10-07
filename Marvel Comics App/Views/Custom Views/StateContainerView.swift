@@ -47,7 +47,7 @@ class StateContainerView: UIView {
         }
         
         stateLabel.snp.makeConstraints { make in
-            make.topMargin.equalTo(105)
+            make.top.equalTo(stateImageView.snp.bottom).offset(25)
             make.centerX.equalToSuperview()
             make.height.equalTo(20)
         }
