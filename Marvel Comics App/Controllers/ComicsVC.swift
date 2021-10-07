@@ -39,8 +39,8 @@ class ComicsVC: UIViewController {
         
         view.addSubview(comicsTableView)
         comicsTableView.snp.makeConstraints { make in
-            make.width.height.equalTo(self.view)
-            make.center.equalTo(self.view)
+            make.height.width.equalToSuperview()
+            make.center.equalToSuperview()
         }
     }
 }
@@ -54,6 +54,7 @@ extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+        cell.backgroundColor = .systemPink
         return cell
     }
     
