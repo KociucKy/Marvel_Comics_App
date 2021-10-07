@@ -25,7 +25,7 @@ class ComicsVC: UIViewController {
     //MARK: - Methods
     func configureVC(){
         title = "Marvel Comics"
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.title = ""
         
@@ -39,8 +39,10 @@ class ComicsVC: UIViewController {
         
         view.addSubview(comicsTableView)
         comicsTableView.snp.makeConstraints { make in
-            make.height.width.equalToSuperview()
-            make.center.equalToSuperview()
+            make.topMargin.equalToSuperview()
+            make.left.equalTo(15)
+            make.right.equalTo(-15)
+            make.bottomMargin.equalToSuperview()
         }
     }
 }
