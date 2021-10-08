@@ -6,29 +6,32 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager{
     static let shared = NetworkManager()
-    let baseURL = "https://gateway.marvel.com/v1/public/comics?format=comic&formatType=comic&noVariants=true&orderBy=-onsaleDate&ts=1"
+    let baseURL = "https://gateway.marvel.com/v1/public/comics?format=comic&formatType=comic&ts=1&orderBy=-onsaleDate"
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
-    private func valueForAPIKey(named keyname:String) -> String {
+    private func valueForKey(named keyname:String) -> String {
         let filePath = Bundle.main.path(forResource: "ApiKey", ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)
         let value = plist?.object(forKey: keyname) as! String
         return value
     }
     
-    func getComics(completed: @escaping (Result<ComicsModel, CustomErrors>) -> Void){
-        let apiKey = valueForAPIKey(named: "API_CLIENT_ID")
-        let hash = valueForAPIKey(named: "API_HASH")
-        let endpoint = baseURL + "&apikey=\(apiKey)" + "&hash=\(hash)"
+    func getComics(limit: Int, completed: @escaping (Result<ComicsModel, CustomErrors>) -> Void){
+        let apiKey = valueForKey(named: "API_CLIENT_ID")
+        let hash = valueForKey(named: "API_HASH")
+        let endpoint = baseURL + "&apikey=\(apiKey)" + "&hash=\(hash)" + "&limit=\(limit)"
         
         guard let url = URL(string: endpoint) else{
             completed(.failure(.unableToComplete))
             return
         }
+        
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let _ = error{

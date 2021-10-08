@@ -19,10 +19,15 @@ struct Results: Codable{
     let title: String
     let description: String?
     let creators: Creators
-//    let thumbnail: String
+    let thumbnail: Thumbnail
+}
+
+struct Thumbnail: Codable{
+    let path: String
 }
 
 struct Creators: Codable{
+    let returned: Int
     let items: [Items]
 }
 

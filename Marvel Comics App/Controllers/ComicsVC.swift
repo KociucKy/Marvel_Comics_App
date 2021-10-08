@@ -15,7 +15,8 @@ class ComicsVC: UIViewController {
     
     
     //MARK: - Properties
-    var comics: [ComicsModel] = []
+    var comicsResults: [Results] = []
+    var limit = 10
 
     
     //MARK: - VC Lifecycle Methods
@@ -42,7 +43,7 @@ class ComicsVC: UIViewController {
         comicsTableView.delegate = self
         comicsTableView.backgroundColor  = .secondarySystemBackground
         comicsTableView.separatorStyle = .none
-        getComics()
+        getComics(limit: limit)
         
         view.addSubview(comicsTableView)
         comicsTableView.register(ComicsCell.self, forCellReuseIdentifier: ComicsCell.reuseID)
@@ -56,13 +57,16 @@ class ComicsVC: UIViewController {
     
     
      //MARK: - Network Call
-    func getComics(){
-        NetworkManager.shared.getComics { [weak self] result in
+    func getComics(limit: Int){
+        NetworkManager.shared.getComics(limit: limit) { [weak self] result in
             guard let self = self else{ return }
             
             switch result{
-                case .success(let comics): print("SUCCESS")
-                case .failure(let error): print(error)
+            case .success(let comics):
+                let list = comics.data.results
+                self.comicsResults.append(contentsOf: list)
+                DispatchQueue.main.async { self.comicsTableView.reloadData() }
+            case .failure(let error): print(error)
             }
         }
     }
@@ -74,7 +78,7 @@ extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
     
     //Using Sections with 1 row inside, to give cells a padding between them
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return comicsResults.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,10 +98,10 @@ extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = comicsTableView.dequeueReusableCell(withIdentifier: ComicsCell.reuseID, for: indexPath) as! ComicsCell
-        cell.coverImage.image = UIImage(named: "Cover")
         cell.backgroundColor = .systemBackground
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
+        cell.set(list: comicsResults, index: indexPath.section)
         return cell
     }
     

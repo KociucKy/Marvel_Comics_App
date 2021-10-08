@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886AD2E527105935009E3B0F /* CustomCoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886AD2E427105935009E3B0F /* CustomCoverImage.swift */; };
 		88BD88ED270E0C3E008F30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD88EC270E0C3E008F30DE /* AppDelegate.swift */; };
 		88BD88EF270E0C3E008F30DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */; };
 		88BD88F6270E0C40008F30DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BD88F5270E0C40008F30DE /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_Comics_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		886AD2E427105935009E3B0F /* CustomCoverImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCoverImage.swift; sourceTree = "<group>"; };
 		88BD88E9270E0C3E008F30DE /* Marvel Comics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Comics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BD88EC270E0C3E008F30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 				A362120F66A5F6BA013D3F7D /* Pods-Marvel Comics App.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		886AD2E32710591F009E3B0F /* Image Views */ = {
+			isa = PBXGroup;
+			children = (
+				886AD2E427105935009E3B0F /* CustomCoverImage.swift */,
+			);
+			path = "Image Views";
 			sourceTree = "<group>";
 		};
 		88BD88E0270E0C3E008F30DE = {
@@ -124,6 +134,7 @@
 		88BD8902270E0DF2008F30DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				886AD2E32710591F009E3B0F /* Image Views */,
 				88BD8918270F1595008F30DE /* Custom Views */,
 				88BD8911270E0FDE008F30DE /* Labels */,
 				88BD890E270E0F5E008F30DE /* Text Fields */,
@@ -332,6 +343,7 @@
 				88BD891D270F21D9008F30DE /* UITextField+Ext.swift in Sources */,
 				88BD88ED270E0C3E008F30DE /* AppDelegate.swift in Sources */,
 				88BD8910270E0F77008F30DE /* CustomTextField.swift in Sources */,
+				886AD2E527105935009E3B0F /* CustomCoverImage.swift in Sources */,
 				88BD8923270F6E74008F30DE /* ComicsModel.swift in Sources */,
 				88BD891F270F26D8008F30DE /* CustomBodyLabel.swift in Sources */,
 				88BD8913270E0FEC008F30DE /* CustomLabel.swift in Sources */,
