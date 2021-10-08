@@ -12,6 +12,10 @@ class ComicsVC: UIViewController {
     
     //MARK: - UI Elements
     var comicsTableView: UITableView!
+    
+    
+    //MARK: - Properties
+    var comics: [ComicsModel] = []
 
     
     //MARK: - VC Lifecycle Methods
@@ -38,6 +42,7 @@ class ComicsVC: UIViewController {
         comicsTableView.delegate = self
         comicsTableView.backgroundColor  = .secondarySystemBackground
         comicsTableView.separatorStyle = .none
+        getComics()
         
         view.addSubview(comicsTableView)
         comicsTableView.register(ComicsCell.self, forCellReuseIdentifier: ComicsCell.reuseID)
@@ -46,6 +51,19 @@ class ComicsVC: UIViewController {
             make.left.equalTo(15)
             make.right.equalTo(-15)
             make.bottomMargin.equalToSuperview()
+        }
+    }
+    
+    
+     //MARK: - Network Call
+    func getComics(){
+        NetworkManager.shared.getComics { [weak self] result in
+            guard let self = self else{ return }
+            
+            switch result{
+                case .success(let comics): print("SUCCESS")
+                case .failure(let error): print(error)
+            }
         }
     }
 }

@@ -17,9 +17,9 @@ struct ComicsData: Codable{
 
 struct Results: Codable{
     let title: String
-    let description: String
+    let description: String?
     let creators: Creators
-    let thumbnail: String
+//    let thumbnail: String
 }
 
 struct Creators: Codable{

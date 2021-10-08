@@ -23,6 +23,7 @@
 		88BD891F270F26D8008F30DE /* CustomBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD891E270F26D8008F30DE /* CustomBodyLabel.swift */; };
 		88BD8921270F2CFB008F30DE /* ComicContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8920270F2CFB008F30DE /* ComicContainerView.swift */; };
 		88BD8923270F6E74008F30DE /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD8922270F6E74008F30DE /* ComicsModel.swift */; };
+		88BD8925270F70FC008F30DE /* ApiKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88BD8924270F70FC008F30DE /* ApiKey.plist */; };
 		F48B93F06628DEDA9172ED5B /* Pods_Marvel_Comics_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		88BD891E270F26D8008F30DE /* CustomBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBodyLabel.swift; sourceTree = "<group>"; };
 		88BD8920270F2CFB008F30DE /* ComicContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicContainerView.swift; sourceTree = "<group>"; };
 		88BD8922270F6E74008F30DE /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
+		88BD8924270F70FC008F30DE /* ApiKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ApiKey.plist; sourceTree = "<group>"; };
 		A362120F66A5F6BA013D3F7D /* Pods-Marvel Comics App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Comics App.release.xcconfig"; path = "Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App.release.xcconfig"; sourceTree = "<group>"; };
 		CB091C937CF8FB917E483C41 /* Pods-Marvel Comics App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marvel Comics App.debug.xcconfig"; path = "Target Support Files/Pods-Marvel Comics App/Pods-Marvel Comics App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 				88BD88F5270E0C40008F30DE /* Assets.xcassets */,
 				88BD88F7270E0C40008F30DE /* LaunchScreen.storyboard */,
 				88BD88FA270E0C40008F30DE /* Info.plist */,
+				88BD8924270F70FC008F30DE /* ApiKey.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BD8925270F70FC008F30DE /* ApiKey.plist in Resources */,
 				88BD88F9270E0C40008F30DE /* LaunchScreen.storyboard in Resources */,
 				88BD88F6270E0C40008F30DE /* Assets.xcassets in Resources */,
 			);
