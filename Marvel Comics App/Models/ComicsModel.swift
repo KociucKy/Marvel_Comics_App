@@ -20,6 +20,11 @@ struct Results: Codable{
     let description: String?
     let creators: Creators
     let thumbnail: Thumbnail
+    let urls: [Urls]
+}
+
+struct Urls: Codable{
+    let url: String
 }
 
 struct Thumbnail: Codable{

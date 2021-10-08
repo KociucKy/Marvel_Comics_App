@@ -159,4 +159,13 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if !comicsResults[indexPath.section].urls.isEmpty{
+            if let url = URL(string: comicsResults[indexPath.section].urls[0].url){
+                presentSafariVC(with: url)
+            }
+        }
+    }
+
 }
