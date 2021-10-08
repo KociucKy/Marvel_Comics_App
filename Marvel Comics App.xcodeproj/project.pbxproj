@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		886AD2E527105935009E3B0F /* CustomCoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886AD2E427105935009E3B0F /* CustomCoverImage.swift */; };
+		886AD2E727107348009E3B0F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886AD2E627107348009E3B0F /* UIViewController+Ext.swift */; };
 		88BD88ED270E0C3E008F30DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD88EC270E0C3E008F30DE /* AppDelegate.swift */; };
 		88BD88EF270E0C3E008F30DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */; };
 		88BD88F6270E0C40008F30DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88BD88F5270E0C40008F30DE /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		82909D6AEBF9A6271E9D1E78 /* Pods_Marvel_Comics_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marvel_Comics_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		886AD2E427105935009E3B0F /* CustomCoverImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCoverImage.swift; sourceTree = "<group>"; };
+		886AD2E627107348009E3B0F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		88BD88E9270E0C3E008F30DE /* Marvel Comics App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Comics App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88BD88EC270E0C3E008F30DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88BD88EE270E0C3E008F30DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				88BD8914270E105C008F30DE /* CustomErrors.swift */,
 				88BD891C270F21D9008F30DE /* UITextField+Ext.swift */,
+				886AD2E627107348009E3B0F /* UIViewController+Ext.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				88BD890D270E0F51008F30DE /* ComicsCell.swift in Sources */,
 				88BD8915270E105C008F30DE /* CustomErrors.swift in Sources */,
 				88BD8908270E0ED1008F30DE /* ComicsVC.swift in Sources */,
+				886AD2E727107348009E3B0F /* UIViewController+Ext.swift in Sources */,
 				88BD88EF270E0C3E008F30DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
