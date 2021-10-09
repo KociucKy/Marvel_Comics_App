@@ -33,7 +33,8 @@ class StateContainerView: UIView {
     }
     
     
-    func configure(){
+    //MARK: - Methods
+    private func configure(){
         self.addSubview(stateImageView)
         self.addSubview(stateLabel)
         

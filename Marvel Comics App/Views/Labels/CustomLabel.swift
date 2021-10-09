@@ -28,7 +28,7 @@ class CustomLabel: UILabel {
     
     
     //MARK: - Methods
-    func configure(){
+    private func configure(){
         textColor = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = K.Fonts.minimumScaleFactorBig

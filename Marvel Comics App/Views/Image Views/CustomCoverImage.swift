@@ -8,9 +8,12 @@
 import UIKit
 
 class CustomCoverImage: UIImageView {
-    
+
+    //MARK: - Properties
     let cache = NetworkManager.shared.cache
 
+    
+    //MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -21,7 +24,8 @@ class CustomCoverImage: UIImageView {
     }
     
     
-    func configure(){
+    //MARK: - Methods
+    private func configure(){
         layer.cornerRadius = K.CustomCoverImage.cornerRadius
         clipsToBounds = true
     }

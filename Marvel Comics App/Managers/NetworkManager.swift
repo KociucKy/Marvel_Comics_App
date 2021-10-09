@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 class NetworkManager{
+    
+    //MARK: - Properties
     static let shared = NetworkManager()
     let baseURL = "https://gateway.marvel.com/v1/public/comics?format=comic&formatType=comic&ts=1&orderBy=-onsaleDate"
     let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
+    
+    //MARK: - Methods
     private func valueForKey(named keyname:String) -> String {
         let filePath = Bundle.main.path(forResource: "ApiKey", ofType: "plist")
         let plist = NSDictionary(contentsOfFile:filePath!)

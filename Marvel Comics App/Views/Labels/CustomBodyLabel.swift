@@ -8,6 +8,8 @@
 import UIKit
 
 class CustomBodyLabel: UILabel {
+    
+    //MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -23,6 +25,7 @@ class CustomBodyLabel: UILabel {
         configure()
     }
     
+    //MARK: - Methods
     private func configure(){
         textColor                   = .secondaryLabel
         font                        = UIFont.preferredFont(forTextStyle: .caption1)

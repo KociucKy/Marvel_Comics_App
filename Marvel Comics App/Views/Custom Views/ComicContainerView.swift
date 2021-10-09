@@ -27,7 +27,7 @@ class ComicContainerView: UIView {
     
     
     //MARK: - Methods
-    func configure(){
+    private func configure(){
         addSubview(titleLabel)
         addSubview(authorLabel)
         addSubview(descriptionLabel)

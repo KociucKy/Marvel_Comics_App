@@ -22,7 +22,7 @@ class CustomTextField: UITextField {
     
     
     //MARK: - Methods
-    func configure(){
+    private func configure(){
         layer.cornerRadius = K.SearchTextField.cornerRadius
         
         textColor = .systemGray

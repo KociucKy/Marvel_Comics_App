@@ -21,6 +21,7 @@ class SearchVC: UIViewController {
     var comicsResults: [Results] = []
     
 
+    //MARK: - VC Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureVC()

@@ -27,7 +27,7 @@ class ComicsCell: UITableViewCell {
     
     
     //MARK: - Methods
-    func configure(){
+    private func configure(){
         addSubview(coverImage)
         addSubview(comicContainer)
         
