@@ -31,7 +31,7 @@ class SearchVC: UIViewController {
     
     
     //MARK: - Methods
-    func configureVC(){
+    private func configureVC(){
         view.backgroundColor = .secondarySystemBackground
         searchTextField.delegate = self
     }

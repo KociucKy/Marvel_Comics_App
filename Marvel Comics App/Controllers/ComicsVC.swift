@@ -28,7 +28,7 @@ class ComicsVC: UIViewController {
     
     
     //MARK: - Methods
-    func configureVC(){
+    private func configureVC(){
         title = K.ViewControllers.comicsVCTitle
         view.backgroundColor = .secondarySystemBackground
         navigationController?.navigationBar.prefersLargeTitles = true

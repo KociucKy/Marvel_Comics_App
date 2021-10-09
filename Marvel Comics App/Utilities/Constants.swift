@@ -10,6 +10,7 @@ import UIKit
 enum K{
     enum ViewControllers{
         static let comicsVCTitle = "Marvel Comics"
+        static let detailsVCTitle = "Details"
         static let containerHeight: CGFloat = 150.0
     }
 
