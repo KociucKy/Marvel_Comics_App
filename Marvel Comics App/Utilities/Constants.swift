@@ -52,6 +52,8 @@ enum K{
     enum ComicsCell{
         static let coverImageWidth: CGFloat = 150.0
         static let noDescription = "Description not available."
+        static let noAuthors = "Author(s) not available"
+        static let thumbnailSize = "/portrait_xlarge.jpg"
     }
     
     enum StateContainer{

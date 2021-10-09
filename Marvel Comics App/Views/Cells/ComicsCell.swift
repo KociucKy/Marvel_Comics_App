@@ -48,13 +48,20 @@ class ComicsCell: UITableViewCell {
         comicContainer.descriptionLabel.text = list[index].description ?? K.ComicsCell.noDescription
         
         if list[index].creators.returned == 0{
-            comicContainer.authorLabel.text = "Author(s) not available"
+            comicContainer.authorLabel.text = K.ComicsCell.noAuthors
         }else if list[index].creators.returned == 1{
             comicContainer.authorLabel.text = "Written by \(list[index].creators.items[0].name)"
-        }else if list[index].creators.returned == 2{
-            comicContainer.authorLabel.text = "Written by \(list[index].creators.items[0].name) and \(list[index].creators.items[1].name)"
+        }else if list[index].creators.returned > 1{
+            comicContainer.authorLabel.text = "Written by"
+            for i in 0...list[index].creators.returned - 1{
+                if i == list[index].creators.returned - 1{
+                    comicContainer.authorLabel.text? += " \(list[index].creators.items[i].name)"
+                }else{
+                    comicContainer.authorLabel.text? += " \(list[index].creators.items[i].name),"
+                }
+            }
         }
         
-        coverImage.downloadImage(from: list[index].thumbnail.path + "/portrait_xlarge.jpg")
+        coverImage.downloadImage(from: list[index].thumbnail.path + K.ComicsCell.thumbnailSize)
     }
 }
