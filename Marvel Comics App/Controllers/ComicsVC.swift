@@ -29,7 +29,7 @@ class ComicsVC: UIViewController {
     
     //MARK: - Methods
     func configureVC(){
-        title = "Marvel Comics"
+        title = K.ViewControllers.comicsVCTitle
         view.backgroundColor = .secondarySystemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.title = ""
@@ -49,8 +49,8 @@ class ComicsVC: UIViewController {
         comicsTableView.register(ComicsCell.self, forCellReuseIdentifier: ComicsCell.reuseID)
         comicsTableView.snp.makeConstraints { make in
             make.topMargin.equalToSuperview()
-            make.left.equalTo(15)
-            make.right.equalTo(-15)
+            make.left.equalTo(K.TableView.tableViewPadding)
+            make.right.equalTo(-K.TableView.tableViewPadding)
             make.bottomMargin.equalToSuperview()
         }
     }
@@ -82,7 +82,7 @@ extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return K.TableView.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -93,20 +93,20 @@ extension ComicsVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1.0
+        return K.TableView.cellPadding
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = comicsTableView.dequeueReusableCell(withIdentifier: ComicsCell.reuseID, for: indexPath) as! ComicsCell
         cell.backgroundColor = .systemBackground
-        cell.layer.cornerRadius = 8
+        cell.layer.cornerRadius = K.TableView.cellCornerRadius
         cell.clipsToBounds = true
         cell.set(list: comicsResults, index: indexPath.section)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return K.TableView.cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

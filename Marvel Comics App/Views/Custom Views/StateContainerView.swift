@@ -12,7 +12,7 @@ class StateContainerView: UIView {
     
     //MARK: - UI Elements
     var stateImageView = UIImageView()
-    var stateLabel = CustomLabel(fontSize: 20, textAlignment: .center)
+    var stateLabel = CustomLabel(fontSize: K.Fonts.fontSize, textAlignment: .center)
     
     
     //MARK: - Initializers
@@ -40,16 +40,16 @@ class StateContainerView: UIView {
         stateImageView.tintColor = .systemGray3
         
         stateImageView.snp.makeConstraints { make in
-            make.topMargin.equalTo(10)
+            make.topMargin.equalTo(K.StateContainer.imageTopMargin)
             make.centerX.equalToSuperview()
-            make.height.equalTo(70)
-            make.width.equalTo(110)
+            make.height.equalTo(K.StateContainer.imageHeight)
+            make.width.equalTo(K.StateContainer.imageWidth)
         }
         
         stateLabel.snp.makeConstraints { make in
-            make.top.equalTo(stateImageView.snp.bottom).offset(25)
+            make.top.equalTo(stateImageView.snp.bottom).offset(K.StateContainer.labelOffset)
             make.centerX.equalToSuperview()
-            make.height.equalTo(20)
+            make.height.equalTo(K.StateContainer.labelHeight)
         }
     }
 }

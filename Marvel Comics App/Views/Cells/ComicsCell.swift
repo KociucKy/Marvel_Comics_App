@@ -33,7 +33,7 @@ class ComicsCell: UITableViewCell {
         
         coverImage.snp.makeConstraints { make in
             make.top.left.bottom.equalToSuperview()
-            make.width.equalTo(150)
+            make.width.equalTo(K.ComicsCell.coverImageWidth)
         }
         
         comicContainer.snp.makeConstraints { make in
@@ -45,7 +45,7 @@ class ComicsCell: UITableViewCell {
     
     func set(list: [Results], index: Int){
         comicContainer.titleLabel.text = list[index].title
-        comicContainer.descriptionLabel.text = list[index].description ?? "Description not available."
+        comicContainer.descriptionLabel.text = list[index].description ?? K.ComicsCell.noDescription
         
         if list[index].creators.returned == 0{
             comicContainer.authorLabel.text = "Author(s) not available"

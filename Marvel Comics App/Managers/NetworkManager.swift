@@ -74,7 +74,7 @@ class NetworkManager{
                 completed(.failure(.unableToComplete))
             }
             
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            guard let response = response as? HTTPURLResponse, response.statusCode == K.Networking.responseCode else {
                 completed(.failure(.invalidResponse))
                 return
             }

@@ -40,15 +40,15 @@ class SearchVC: UIViewController {
         view.addSubview(stateContainer)
         
         searchTextField.snp.makeConstraints { make in
-            make.topMargin.equalTo(10)
-            make.left.equalTo(20)
-            make.right.equalTo(-20)
-            make.height.equalTo(50)
+            make.topMargin.equalTo(K.SearchTextField.searchFieldTopMargin)
+            make.left.equalTo(K.SearchTextField.searchFieldLeftRightMargin)
+            make.right.equalTo(-K.SearchTextField.searchFieldLeftRightMargin)
+            make.height.equalTo(K.SearchTextField.searchFieldHeight)
         }
         
         stateContainer.snp.makeConstraints { make in
             make.center.equalTo(self.view)
-            make.height.equalTo(150)
+            make.height.equalTo(K.ViewControllers.containerHeight)
             make.width.equalToSuperview()
         }
     }
@@ -65,9 +65,9 @@ class SearchVC: UIViewController {
         view.addSubview(resultTableView)
         resultTableView.register(ComicsCell.self, forCellReuseIdentifier: ComicsCell.reuseID)
         resultTableView.snp.makeConstraints { make in
-            make.top.equalTo(searchTextField.snp.bottom).offset(12)
-            make.left.equalTo(15)
-            make.right.equalTo(-15)
+            make.top.equalTo(searchTextField.snp.bottom).offset(K.TableView.resultTableOffset)
+            make.left.equalTo(K.TableView.tableViewPadding)
+            make.right.equalTo(-K.TableView.tableViewPadding)
             make.bottomMargin.equalToSuperview()
         }
     }
@@ -133,7 +133,7 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return K.TableView.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -144,20 +144,20 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 1.0
+        return K.TableView.cellPadding
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = resultTableView.dequeueReusableCell(withIdentifier: ComicsCell.reuseID, for: indexPath) as! ComicsCell
         cell.backgroundColor = .systemBackground
-        cell.layer.cornerRadius = 8
+        cell.layer.cornerRadius = K.TableView.cellCornerRadius
         cell.clipsToBounds = true
         cell.set(list: comicsResults, index: indexPath.section)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
+        return K.TableView.cellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

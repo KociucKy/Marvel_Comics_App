@@ -10,7 +10,7 @@ import UIKit
 class ComicContainerView: UIView {
     
     //MARK: - UI Elements
-    let titleLabel = CustomLabel(fontSize: 20, textAlignment: .left)
+    let titleLabel = CustomLabel(fontSize: K.Fonts.fontSize, textAlignment: .left)
     let authorLabel = CustomBodyLabel(textAlignment: .left)
     let descriptionLabel = UILabel()
     
@@ -32,32 +32,28 @@ class ComicContainerView: UIView {
         addSubview(authorLabel)
         addSubview(descriptionLabel)
         
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        titleLabel.font = UIFont.systemFont(ofSize: K.Fonts.fontSize, weight: .bold)
         descriptionLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
-        titleLabel.text = "Star Wars #39"
-        authorLabel.text = "written by Mariko Tamaki"
-        descriptionLabel.text = "Jen Walters used to fight for justice in the courtroom as a lawyer and outside of it as the super hero known as She-Hulk. But after the events of Civil War, Jen's Hulk persona has changed."
-        descriptionLabel.numberOfLines = 0
-        
-        let padding: CGFloat = 12
+        descriptionLabel.numberOfLines = K.ComicContainer.descriptionNumberOfLines
+
         
         titleLabel.snp.makeConstraints { make in
-            make.top.left.equalTo(padding)
-            make.right.equalTo(-padding)
-            make.height.equalTo(20)
+            make.top.left.equalTo(K.ComicContainer.padding)
+            make.right.equalTo(-K.ComicContainer.padding)
+            make.height.equalTo(K.ComicContainer.height)
         }
         
         authorLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.left.equalTo(padding)
-            make.right.equalTo(-padding)
-            make.height.equalTo(20)
+            make.top.equalTo(titleLabel.snp.bottom).offset(K.ComicContainer.authorLabelOffset)
+            make.left.equalTo(K.ComicContainer.padding)
+            make.right.equalTo(-K.ComicContainer.padding)
+            make.height.equalTo(K.ComicContainer.height)
         }
         
         descriptionLabel.snp.makeConstraints { make in
-            make.topMargin.equalTo(authorLabel.snp.bottom).offset(padding)
-            make.left.equalTo(padding)
-            make.right.equalTo(-padding)
+            make.topMargin.equalTo(authorLabel.snp.bottom).offset(K.ComicContainer.padding)
+            make.left.equalTo(K.ComicContainer.padding)
+            make.right.equalTo(-K.ComicContainer.padding)
             make.bottom.equalToSuperview()
         }
     }

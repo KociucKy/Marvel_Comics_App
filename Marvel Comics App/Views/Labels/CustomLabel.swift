@@ -31,7 +31,7 @@ class CustomLabel: UILabel {
     func configure(){
         textColor = .label
         adjustsFontSizeToFitWidth = true
-        minimumScaleFactor = 0.9
+        minimumScaleFactor = K.Fonts.minimumScaleFactorBig
         lineBreakMode = .byTruncatingTail
     }
 }

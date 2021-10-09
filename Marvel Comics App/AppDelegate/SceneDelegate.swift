@@ -25,14 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createComicsNC() -> UINavigationController{
         let comicsNC = ComicsVC()
-        comicsNC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house.fill"), tag: 0)
+        comicsNC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: K.SFSymbols.home), tag: 0)
         
         return UINavigationController(rootViewController: comicsNC)
     }
     
     func createSearchNC() -> UINavigationController{
         let searchNC = SearchVC()
-        searchNC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "magnifyingglass"), tag: 1)
+        searchNC.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: K.SFSymbols.searching), tag: 1)
         
         return UINavigationController(rootViewController: searchNC)
     }

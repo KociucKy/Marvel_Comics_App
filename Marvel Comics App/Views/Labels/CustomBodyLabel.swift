@@ -27,7 +27,7 @@ class CustomBodyLabel: UILabel {
         textColor                   = .secondaryLabel
         font                        = UIFont.preferredFont(forTextStyle: .caption1)
         adjustsFontSizeToFitWidth   = true
-        minimumScaleFactor          = 0.75
+        minimumScaleFactor          = K.Fonts.minimumScaleFactorSmall
         lineBreakMode               = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }

@@ -22,7 +22,7 @@ class CustomCoverImage: UIImageView {
     
     
     func configure(){
-        layer.cornerRadius = 8
+        layer.cornerRadius = K.CustomCoverImage.cornerRadius
         clipsToBounds = true
     }
     

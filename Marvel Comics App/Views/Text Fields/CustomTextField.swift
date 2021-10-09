@@ -23,21 +23,21 @@ class CustomTextField: UITextField {
     
     //MARK: - Methods
     func configure(){
-        layer.cornerRadius = 10
+        layer.cornerRadius = K.SearchTextField.cornerRadius
         
         textColor = .systemGray
         tintColor = .label
         textAlignment = .left
         font = UIFont.preferredFont(forTextStyle: .title3)
         adjustsFontSizeToFitWidth = true
-        minimumFontSize = 17
+        minimumFontSize = K.SearchTextField.minimumFontSize
         
         backgroundColor = .quaternarySystemFill
         autocorrectionType = .no
         returnKeyType = .go
-        placeholder = "Search for a comic book"
+        placeholder = K.SearchTextField.placeholder
         
-        leftImage(UIImage(systemName: "magnifyingglass"), imageWidth: 20, padding: 8)
+        leftImage(UIImage(systemName: K.SFSymbols.searching), imageWidth: K.SearchTextField.imageSize, padding: K.SearchTextField.imagePadding)
         
         clearButtonMode = .whileEditing
     }
