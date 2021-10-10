@@ -1,6 +1,6 @@
 # Marvel Comics
 
-This is an app where you can see particular Marvel comics in UITableView with custom cells. Apart from that you can search for any comic that you are interested in. You can also get more details by clicking particular UITableView cell - it will open Safari window with info from Marvel.
+This is an app where you can see particular Marvel comics in UITableView with custom cells. Apart from that you can search for any comic that you are interested in. Of course if there are no results for title you typed in, you will be informed about that. You can also get more details by clicking particular UITableView cell - it will open Safari window with info from Marvel.
 <br>
 <br>
 <br>
