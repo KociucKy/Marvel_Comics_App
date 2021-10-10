@@ -24,11 +24,8 @@ This is an app where you can see particular Marvel comics in UITableView with cu
 9. 
 <br>
 <br>
-<br>
 
 
 ### Screenshots
 <img src="Images/Screenshot.png">
-<br>
-<br>
-<br>
+
