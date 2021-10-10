@@ -33,7 +33,6 @@ class ComicsVC: UIViewController {
         view.backgroundColor = .secondarySystemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.tabBarItem.title = ""
-        
     }
     
     
@@ -66,7 +65,8 @@ class ComicsVC: UIViewController {
                 let list = comics.data.results
                 self.comicsResults.append(contentsOf: list)
                 DispatchQueue.main.async { self.comicsTableView.reloadData() }
-            case .failure(let error): print(error)
+            case .failure(let error):
+                self.displayAnAlert(title: K.Alerts.anErrorOccured, message: error.rawValue, action: K.Alerts.alertAction)
             }
         }
     }

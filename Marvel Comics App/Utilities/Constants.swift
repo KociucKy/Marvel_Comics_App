@@ -48,6 +48,9 @@ enum K{
     enum SFSymbols{
         static let searching = "magnifyingglass"
         static let home = "house.fill"
+        static let empty = "pencil.slash"
+        static let back = "arrow.backward"
+        static let book = "book.fill"
     }
     
     enum ComicsCell{
@@ -63,6 +66,7 @@ enum K{
         static let imageWidth: CGFloat = 110.0
         static let labelOffset: CGFloat = 25.0
         static let labelHeight: CGFloat = 20.0
+        static let textLabel = "Start typing to find a particular comics."
     }
     
     enum ComicContainer{
@@ -74,5 +78,11 @@ enum K{
     
     enum Networking{
         static let responseCode = 200
+    }
+    
+    enum Alerts{
+        static let noResults = "No results"
+        static let anErrorOccured = "Bad Stuff Happend"
+        static let alertAction = "Ok"
     }
 }

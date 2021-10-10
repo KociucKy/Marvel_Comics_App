@@ -11,8 +11,8 @@ import SnapKit
 class StateContainerView: UIView {
     
     //MARK: - UI Elements
-    var stateImageView = UIImageView()
-    var stateLabel = CustomLabel(fontSize: K.Fonts.fontSize, textAlignment: .center)
+    let stateImageView = UIImageView()
+    let stateLabel = CustomLabel(fontSize: K.Fonts.fontSize, textAlignment: .center)
     
     
     //MARK: - Initializers

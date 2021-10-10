@@ -12,7 +12,7 @@ class SearchVC: UIViewController {
     
     //MARK: - UI Elements
     let searchTextField = CustomTextField(frame: .zero)
-    let stateContainer = StateContainerView(text: "Start typing to find a particular comics.", icon: "book.fill")
+    let stateContainer = StateContainerView(text: K.StateContainer.textLabel, icon: K.SFSymbols.book)
     var resultTableView: UITableView!
     var isSearchingFirstTime = true
     
@@ -101,7 +101,7 @@ extension SearchVC: UITextFieldDelegate{
                         self.comicsResults.append(contentsOf: list)
                         
                         if self.comicsResults.isEmpty{
-                            self.displayAnAlert(title: "No results", message: "There are no comics with title: \(title).", action: "Ok")
+                            self.displayAnAlert(title: K.Alerts.noResults, message: "There are no comics with title: \(title).", action: K.Alerts.alertAction)
                         }else{
                             if self.isSearchingFirstTime{
                                 DispatchQueue.main.async {
@@ -116,7 +116,8 @@ extension SearchVC: UITextFieldDelegate{
                             }
                             
                         }
-                    case .failure(let error): print(error)
+                    case .failure(let error):
+                        self.displayAnAlert(title: K.Alerts.anErrorOccured, message: error.rawValue, action: K.Alerts.alertAction)
                     }
                 }
             }
