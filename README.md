@@ -18,9 +18,10 @@ This is an app where you can see particular Marvel comics in UITableView with cu
 3. Clone this repo to your computer
 4. Inside terminal change your direction to the folder with this project and type: "pod install"
 5. Open Xcode
-6. Open project from the file with extension ".xcworkspace"
-7. Choose the Simulator.
-8. Hit Run button.
+6. Go to file called "NetworkManager" and comment out one method and put your credentials to variables (follow comments in code)
+7. Open project from the file with extension ".xcworkspace"
+8. Choose the Simulator.
+9. Hit Run button.
 <br>
 
 
