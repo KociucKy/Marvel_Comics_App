@@ -21,8 +21,6 @@ This is an app where you can see particular Marvel comics in UITableView with cu
 6. Open project from the file with extension ".xcworkspace"
 7. Choose the Simulator.
 8. Hit Run button.
-9. 
-<br>
 <br>
 
 
